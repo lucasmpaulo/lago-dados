@@ -1,0 +1,59 @@
+{
+  "fields": [
+    {
+      "metadata": {},
+      "name": "idCliente",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "metadata": {},
+      "name": "flEmail",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "metadata": {},
+      "name": "flTwitch",
+      "nullable": true,
+      "type": "long"
+    },
+    {
+      "metadata": {},
+      "name": "flYoutube",
+      "nullable": true,
+      "type": "long"
+    },
+    {
+      "metadata": {},
+      "name": "flBlueSky",
+      "nullable": true,
+      "type": "long"
+    },
+    {
+      "metadata": {},
+      "name": "flInstagram",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "metadata": {},
+      "name": "qtdePontos",
+      "nullable": true,
+      "type": "long"
+    },
+    {
+      "metadata": {},
+      "name": "DtCriacao",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "metadata": {},
+      "name": "DtAtualizacao",
+      "nullable": true,
+      "type": "timestamp_ntz"
+    }
+  ],
+  "type": "struct"
+}
