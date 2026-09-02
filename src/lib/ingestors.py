@@ -1,14 +1,8 @@
-# Databricks notebook source
-# DBTITLE 1,Imports biblioteca
 import delta
 import utils
 import tqdm
 from pyspark.sql.functions import col, row_number
 from pyspark.sql.window import Window
-
-# COMMAND ----------
-
-# DBTITLE 1,Classe de ingestão Full_Load
 class Ingestor:
     def __init__(self, spark, catalog, schemaname, tablename, data_format):
         self.catalog    = catalog
@@ -37,9 +31,7 @@ class Ingestor:
         df = self.load(path)
         return self.save(df)
 
-# COMMAND ----------
 
-# DBTITLE 1,Classe de ingestão CDC
 class IngestorCDC(Ingestor):
     def __init__(self, spark, catalog, schemaname, tablename, data_format, id_field, timestamp_field):
         super().__init__(spark, catalog, schemaname, tablename, data_format)
