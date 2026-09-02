@@ -2,13 +2,13 @@
   "fields": [
     {
       "metadata": {},
-      "name": "idTransactionCart",
+      "name": "idTransacaoProduto",
       "nullable": true,
       "type": "string"
     },
     {
       "metadata": {},
-      "name": "idTransaction",
+      "name": "IdTransacao",
       "nullable": true,
       "type": "string"
     },
@@ -20,21 +20,21 @@
     },
     {
       "metadata": {},
-      "name": "QuantityProduct",
+      "name": "IdProduto",
       "nullable": true,
       "type": "long"
     },
     {
       "metadata": {},
-      "name": "OP",
+      "name": "QtdeProduto",
       "nullable": true,
-      "type": "string"
+      "type": "long"
     },
     {
       "metadata": {},
-      "name": "modified_date",
+      "name": "vlProduto",
       "nullable": true,
-      "type": "timestamp_ntz"
+      "type": "long"
     }
   ],
   "type": "struct"

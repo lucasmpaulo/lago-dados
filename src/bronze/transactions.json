@@ -2,39 +2,33 @@
   "fields": [
     {
       "metadata": {},
-      "name": "idTransaction",
+      "name": "IdTransacao",
       "nullable": true,
       "type": "string"
     },
     {
       "metadata": {},
-      "name": "idCustomer",
+      "name": "IdCliente",
       "nullable": true,
       "type": "string"
     },
     {
       "metadata": {},
-      "name": "dtTransaction",
+      "name": "DtCriacao",
       "nullable": true,
-      "type": "string"
+      "type": "date"
     },
     {
       "metadata": {},
-      "name": "pointsTransaction",
+      "name": "QtdePontos",
       "nullable": true,
       "type": "long"
     },
     {
       "metadata": {},
-      "name": "OP",
+      "name": "DescSistemaOrigem",
       "nullable": true,
       "type": "string"
-    },
-    {
-      "metadata": {},
-      "name": "modified_date",
-      "nullable": true,
-      "type": "timestamp_ntz"
     }
   ],
   "type": "struct"
