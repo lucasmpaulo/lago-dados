@@ -25,7 +25,15 @@ class Ingestor:
         return df
     
     def save(self, df):
-        (df.coalesce(1).write.format("delta").mode("overwrite").saveAsTable(f"{self.catalog}.{self.schemaname}.{self.tablename}"))
+        table_name = f"{self.catalog}.{self.schemaname}.{self.tablename}"
+        (df.coalesce(1)
+            .write
+            .format("delta")
+            .mode("overwrite")
+            .option("delta.enableChangeDataFeed", "true")
+            .saveAsTable(table_name))
+        # Ensure CDF is enabled on existing tables (overwrite preserves prior table properties)
+        self.spark.sql(f"ALTER TABLE {table_name} SET TBLPROPERTIES ('delta.enableChangeDataFeed' = true)")
     
     def execute(self, path):
         df = self.load(path)
