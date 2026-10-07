@@ -1,5 +1,8 @@
+WITH products AS (
+    SELECT explode(sequence(1, 16)) AS IdProduto
+)
 SELECT
-    DISTINCT IdProduto,
+    IdProduto,
     case
         when IdProduto = 1  then 'Presença Streak'
         when IdProduto = 2  then 'Resgatar Ponei'
@@ -18,5 +21,4 @@ SELECT
         when IdProduto = 15 then 'Airflow Lover'
         when IdProduto = 16 then 'Cerveja'
     end AS NomeProduto
-FROM bronze.transactions_product
-ORDER BY 1
+FROM products
