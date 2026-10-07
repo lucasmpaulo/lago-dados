@@ -1,5 +1,5 @@
 SELECT
     idTransacaoProduto,
     idTransacao,
-    QtdeProduto as nrQuantidadeProduto
+    QtdeProduto AS nrQuantidadeProduto
 FROM bronze.transactions_product

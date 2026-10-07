@@ -1,5 +1,5 @@
 SELECT 
     idCliente,
-    qtdePontos as nrPontosCliente,
-    flEmail as flEmailCliente
+    qtdePontos AS nrPontosCliente,
+    flEmail AS flEmailCliente
 FROM bronze.customers
