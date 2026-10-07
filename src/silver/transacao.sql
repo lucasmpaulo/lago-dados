@@ -2,5 +2,5 @@ SELECT
     IdTransacao,
     IdCliente,
     DtCriacao AS dtTransacao,
-    QtdePontos as nrPontosTransacao
+    QtdePontos AS nrPontosTransacao
 FROM bronze.transactions
