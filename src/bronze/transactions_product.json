@@ -14,15 +14,9 @@
     },
     {
       "metadata": {},
-      "name": "NameProduct",
-      "nullable": true,
-      "type": "string"
-    },
-    {
-      "metadata": {},
       "name": "IdProduto",
       "nullable": true,
-      "type": "long"
+      "type": "string"
     },
     {
       "metadata": {},
