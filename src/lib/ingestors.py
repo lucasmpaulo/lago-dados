@@ -1,6 +1,5 @@
 import delta
 import utils
-import tqdm
 from pyspark.sql.functions import col, row_number
 from pyspark.sql.window import Window
 
