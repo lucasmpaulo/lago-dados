@@ -104,7 +104,7 @@
           "notebook_path": "src/silver/ingestao",
           "base_parameters": {
             "tablename": "produtos",
-            "id_field": 
+            "id_field": "idProduto"
           },
           "source": "GIT"
         },
