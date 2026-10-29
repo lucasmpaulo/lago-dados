@@ -120,7 +120,7 @@ class IngestorCDF(IngestorCDC):
     def save(self, df):
         stream = (df.writeStream
                     .option("checkpointLocation", self.checkpoint)
-                    .foreachBatch(lambda df, batch_id: upsert(df))
+                    .foreachBatch(lambda df, batch_id: self.upsert(df))
                     .trigger(availableNow=True))
         return stream.start()
     
