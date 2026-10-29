@@ -144,9 +144,7 @@ class IngestorCDF(IngestorCDC):
              .whenMatchedUpdateAll(condition = "d._change_type = 'update_postimage'")
              .whenNotMatchedInsertAll(condition = "d._change_type = 'insert' OR d._change_type = 'update_postimage'")
              .execute())
-    
+        
     def execute(self):
         df = self.load()
-        query = self.save(df)
-        query.awaitTermination()
-        return query
+        return self.save(df)
