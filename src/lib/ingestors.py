@@ -120,7 +120,7 @@ class IngestorCDF(IngestorCDC):
     def save(self, df):
         stream = (df.writeStream
                     .option("checkpointLocation", self.checkpoint)
-                    .foreachBatch(lambda df, batchID: upsert(df))
+                    .foreachBatch(lambda df, batch_id: upsert(df))
                     .trigger(availableNow=True))
         return stream.start()
     
@@ -144,7 +144,9 @@ class IngestorCDF(IngestorCDC):
              .whenMatchedUpdateAll(condition = "d._change_type = 'update_postimage'")
              .whenNotMatchedInsertAll(condition = "d._change_type = 'insert' OR d._change_type = 'update_postimage'")
              .execute())
-        
+    
     def execute(self):
         df = self.load()
-        return self.save(df)
+        query = self.save(df)
+        query.awaitTermination()
+        return query
