@@ -104,7 +104,7 @@
           "notebook_path": "src/silver/ingestao",
           "base_parameters": {
             "tablename": "produtos",
-            "id_field": "idProduto"
+            "id_field": "IdProduto"
           },
           "source": "GIT"
         },
@@ -125,7 +125,7 @@
           "notebook_path": "src/silver/ingestao",
           "base_parameters": {
             "tablename": "transacao_produto",
-            "id_field": "IdProduto"
+            "id_field": "idTransacaoProduto"
           },
           "source": "GIT"
         },
